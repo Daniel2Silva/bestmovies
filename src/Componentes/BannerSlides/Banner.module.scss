@@ -1,0 +1,14 @@
+.bannerItem {
+  filter: brightness(70%); 
+  width: 100vw;
+  -webkit-mask-image: linear-gradient(to top, transparent 5%, black 100%);
+  mask-image: linear-gradient(to top, transparent 5%, black 100%);
+  img{
+    
+    object-fit:cover;
+    object-position: center;
+    width: 100vw;
+    height: 80vh;
+  }
+}
+

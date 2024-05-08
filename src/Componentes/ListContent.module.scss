@@ -1,0 +1,35 @@
+.movies{
+  h1{
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    color: white;
+    font-weight: 700;
+  }
+}
+
+.moviesList{
+  display: flex;
+  gap: 2rem;
+  overflow: auto;
+  padding: 1rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+
+.moviesList::-webkit-scrollbar {
+  height: 10px;
+}
+
+.moviesList::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: blueviolet;
+}
+
+.moviesList::-webkit-scrollbar-track {
+  background-color: transparent;
+  -webkit-box-shadow: 0px -2px 25px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px -2px 25px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px -2px 25px 0px rgba(0,0,0,0.75);
+  border-radius: 5px;
+}

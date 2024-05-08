@@ -1,0 +1,38 @@
+.card {
+  width: 12.5rem;
+  transition: transform 0.6s ease;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.1); 
+  border: 2px solid #c7c7c7;
+  .btnCard{
+    opacity: 1;
+  }
+}
+
+.btnCard{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  position: absolute;
+  bottom: 0.8rem;
+  transition: .3s ease;
+  opacity: 0;
+  .btnAV{
+    display: flex;
+    gap: 0.4rem;
+  }
+  button{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border: none;
+    z-index: 1000;
+    cursor: pointer;
+  }
+}

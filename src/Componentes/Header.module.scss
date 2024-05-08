@@ -1,0 +1,63 @@
+.header{
+  background: transparent;
+  backdrop-filter: brightness(40%); ;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem ;
+    .logoSite{
+      font-family: 'Roboto';
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: blueviolet;
+      letter-spacing: 2px;
+    }
+    .selectH{
+      padding: 0.5rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Roboto';
+      font-size: 1rem;
+      font-weight: 500;
+      background: transparent;
+      color: white;
+      border: 1px solid grey;
+    }
+    .searchBar{
+      padding: 0.5rem;
+      border-radius: 6px;
+      background: transparent;
+      border: 1px solid grey;
+      color: white;
+    }
+    button{
+      display: none;
+    }
+  }
+}
+
+
+  @media (max-width: 768px) {
+    .header{
+      .nav{
+        .logoSite {
+          font-size: 1rem;
+          padding: 0; 
+        }
+        .selectH{
+          padding: 0.2rem;
+          font-size: 1rem;
+        }
+        .searchBar{
+          width: 100px;
+        }
+      } 
+    } 
+  }
