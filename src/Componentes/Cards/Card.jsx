@@ -4,13 +4,22 @@ import ButtonAdd from './ButtonAdd';
 import { Link } from 'react-router-dom';
 import ButtonRemove from './ButtonRemove';
 import { FaPlay, FaInfoCircle } from 'react-icons/fa';
+import InfoModal from './InfoModal';
+import { UserContext } from '../../UserContext';
 
 const Card = ({ result }) => {
+  const { modalOpen, setModalOpen, setSelectedMovie } =
+    React.useContext(UserContext);
   const localStorageFav = JSON.parse(localStorage.getItem('fav')) || [];
   const existingItem = localStorageFav.find(
     (favItem) => favItem.id === result.id,
   );
   const hasFavorite = existingItem !== undefined;
+
+  function handleModal() {
+    setSelectedMovie(result);
+    setModalOpen(true);
+  }
 
   return (
     <section>
@@ -32,8 +41,8 @@ const Card = ({ result }) => {
               <ButtonAdd media={result} />
             )}
           </div>
-          <button>
-            <FaInfoCircle />
+          <button className={styles.info}>
+            <FaInfoCircle onClick={handleModal} />
           </button>
         </section>
       </div>

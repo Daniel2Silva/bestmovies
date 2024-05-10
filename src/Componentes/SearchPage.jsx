@@ -6,6 +6,7 @@ import Card from './Cards/Card';
 import styles from './SearchPage.module.scss';
 import useFetch from '../Hooks/useFetch';
 import { UserContext } from '../UserContext';
+import InfoModal from './Cards/InfoModal';
 
 const SearchPage = () => {
   const { contentType } = useContext(UserContext);

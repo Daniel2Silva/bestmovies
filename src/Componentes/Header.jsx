@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import styles from './Header.module.scss';
 import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { CgProfile } from 'react-icons/cg';
 import { UserContext } from '../UserContext';
 
 const Header = () => {
@@ -25,7 +26,7 @@ const Header = () => {
     <section className={styles.header}>
       <div className={`container  ${styles.nav}`}>
         <Link className={styles.logoSite} to="/">
-          BestMovies
+          BESTMOVIES
         </Link>
         <nav>
           {showNavLinks && ( // Renderiza os NavLink somente se showNavLinks for true
@@ -41,20 +42,26 @@ const Header = () => {
             </>
           )}
         </nav>
-        <Link to="/fav">Fav</Link>
-        <form onSubmit={handleSearchPage}>
-          <input
-            type="text"
-            name="search"
-            value={search}
-            onChange={({ target }) => setSearch(target.value)}
-            className={styles.searchBar}
-            placeholder={
-              contentType === 'movie' ? 'Pesquisar Filmes' : 'Pesquisar Séries'
-            }
-          />
-          <button type="submit"></button>
-        </form>
+        <section className={styles.headerRigth}>
+          <form onSubmit={handleSearchPage}>
+            <input
+              type="text"
+              name="search"
+              value={search}
+              onChange={({ target }) => setSearch(target.value)}
+              className={styles.searchBar}
+              placeholder={
+                contentType === 'movie'
+                  ? 'Pesquisar Filmes'
+                  : 'Pesquisar Séries'
+              }
+            />
+            <button type="submit"></button>
+          </form>
+          <Link to="/fav">
+            <CgProfile className={styles.profile} />
+          </Link>
+        </section>
       </div>
     </section>
   );
